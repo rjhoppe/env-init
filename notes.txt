@@ -1,0 +1,10 @@
+Having trouble running the py-init script from my PowerShell terminal... can run it fine from within VSCode.
+
+# powershell-py-init
+A simple PowerShell script I wrote to initialize a Python dev environment in the desired directory.
+
+## Technologies Used
+* PowerShell
+* Python
+* Go
+* Node.js
