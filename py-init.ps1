@@ -1,5 +1,5 @@
 $py = python --version
-$dir = "c:\Users\Rick\Documents\Python_Practice"
+$dir = "c:\Users\Rick\Documents\Python_Practice\"
 if ($py -eq $null) {
   Write-Host "No Python version found. Please download and install Python before trying again."
 } else {
