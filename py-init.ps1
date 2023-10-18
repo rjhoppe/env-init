@@ -24,6 +24,7 @@ if (Test-Path -Path $full_dir) {
   Write-Host "Creating necessary files..."
   New-Item -Path . -Name "main.py" -ItemType "file" 
   New-Item -Path . -Name "requirements.txt" -ItemType "file"
+  New-Item -Path . -Name "notes.txt" -ItemType "file"
 }
 
 $project_type = Read-Host -Prompt "Select your project type: Basic | Data | Cloud"
@@ -34,12 +35,14 @@ if ($project_type -eq "Data") {
   Write-Host "Activating env..." 
   .venv\Scripts\activate
   Write-Host "Installing necessary libraries..."
-  python -m pip install pandas numpy sqlalchemy pytest python-dotenv
+  python -m pip install pandas numpy sqlalchemy pytest python-dotenv icecream
   Add-Content .\main.py "import numpy as np"
   Add-Content .\main.py "import pandas as pd"
+  Add-Content .\main.py "from icecream import ic"
   Add-Content .\main.py "from dotenv import load_dotenv"
   Add-Content .\main.py "import sqlalchemy"
   Add-Content .\main.py "import pytest"
+  Add-Content .\main.py "import sys"
   python -m pip freeze > requirements.txt
 }
 
